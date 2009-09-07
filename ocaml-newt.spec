@@ -8,7 +8,7 @@ URL:            http://et.redhat.com/~rjones/ocaml-newt/
 Source0:        http://et.redhat.com/~rjones/ocaml-newt/ocaml-newt-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml-findlib
-BuildRequires:  ocaml-camlidl
+BuildRequires:  ocaml-camlidl-devel
 BuildRequires:  newt-devel
 
 %description
