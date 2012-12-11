@@ -1,13 +1,13 @@
 Name:           ocaml-newt
 Version:        0.9
-Release:        %mkrel 1
+Release:        2
 Summary:        OCaml library for using newt text mode window system
 License:        LGPLv2+ with exceptions
 Group:          Development/Other
 URL:            http://et.redhat.com/~rjones/ocaml-newt/
 Source0:        http://et.redhat.com/~rjones/ocaml-newt/ocaml-newt-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  ocaml-findlib
+BuildRequires:  ocaml
 BuildRequires:  ocaml-camlidl-devel
 BuildRequires:  newt-devel
 
@@ -44,16 +44,12 @@ make opt
 make doc
 
 %install
-rm -rf %{buildroot}
 export DESTDIR=%{buildroot}
 export OCAMLFIND_DESTDIR=%{buildroot}/%{_libdir}/ocaml
 export DLLDIR=$OCAMLFIND_DESTDIR/stublibs
 mkdir -p $OCAMLFIND_DESTDIR/stublibs
 mkdir -p $OCAMLFIND_DESTDIR/newt
 make install
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -71,4 +67,13 @@ rm -rf %{buildroot}
 %{_libdir}/ocaml/newt/*.cmxa
 %{_libdir}/ocaml/newt/*.cmx
 %{_libdir}/ocaml/newt/*.mli
+
+
+
+%changelog
+* Mon Sep 07 2009 Florent Monnier <blue_prawn@mandriva.org> 0.9-1mdv2010.0
++ Revision: 432962
+- take the devel one in BR
+- BuildRequires: ocaml-camlidl
+- spec file mostly imported from the fedora's one by Richard Jones
 
