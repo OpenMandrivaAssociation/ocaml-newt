@@ -1,6 +1,6 @@
 Name:           ocaml-newt
 Version:        0.9
-Release:        2
+Release:        3
 Summary:        OCaml library for using newt text mode window system
 License:        LGPLv2+ with exceptions
 Group:          Development/Other
