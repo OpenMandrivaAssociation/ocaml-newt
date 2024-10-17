@@ -4,7 +4,7 @@ Release:        3
 Summary:        OCaml library for using newt text mode window system
 License:        LGPLv2+ with exceptions
 Group:          Development/Other
-URL:            http://et.redhat.com/~rjones/ocaml-newt/
+URL:            https://et.redhat.com/~rjones/ocaml-newt/
 Source0:        http://et.redhat.com/~rjones/ocaml-newt/ocaml-newt-%{version}.tar.gz
 BuildRequires:  ocaml-findlib
 BuildRequires:  ocaml
